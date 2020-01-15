@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@color/colorPrimaryDark"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="1.5dp"
+    android:background="#eeeeee"
+    android:orientation="vertical">
+
+    <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      android:background="#eeeeee"
+      android:scaleType="fitXY"
+      android:src="@drawable/no_internet"
+      tools:ignore="ContentDescription"/>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="#eeeeee"
+      android:orientation="vertical">
+
+      <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="#eeeeee"
+        android:gravity="center"
+        android:text="@string/internet"
+        android:textColor="#011149"
+        android:textSize="20sp"/>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#eeeeee"
+        android:gravity="center"
+        android:text="@string/internet_check"
+        android:textColor="#041245"
+        android:textSize="15sp"/>
+    </LinearLayout>
+
+    <Button
+      android:id="@+id/button_yes"
+      style="@style/ClickableWrapper"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/colorPrimaryDark"
+      android:text="@string/dialog_ok"
+      android:textColor="@android:color/white"/>
+  </LinearLayout>
+</LinearLayout>

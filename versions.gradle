@@ -1,0 +1,51 @@
+ext {
+    versions = [
+            // Gradle Versions
+            android_gradle_plugin       : '3.4.0',
+            retrolambda_gradle_plugin   : '3.7.0',
+            google_services_plugin      : '4.2.0',
+            maven_gradle_plugin         : '1.4.1',
+            bintray_gradle_plugin       : '1.7.1',
+            one_signal_gradle_plugin    : '0.12.1',
+            fabric                      : '1.28.1',
+
+            // Dependency Versions
+            kotlin_version              : '1.3.31',
+            supportLibraryVersion       : '28.0.0',
+            constraintLayout            : '1.1.3',
+            multidex                    : '1.0.3',
+            eventbusVersion             : '3.1.1',
+            currencyEditTextVersion     : '2.0.2',
+            moneytextviewTextViewVersion: '1.1.0',
+            roomVersion                 : '1.1.1',
+            archLifecycleVersion        : '1.1.1',
+            sqliteassethelper           : '2.0.1',
+            firebaseCore                : '16.0.8',
+            firebaseAds                 : '17.2.0',
+            crashlytics                 : '2.9.9@aar',
+            googleAds                   : '17.2.0',
+            oneSignal                   : '3.10.7',
+            butterknife                 : '8.5.1',
+            picasso                     : '2.71828',
+
+    ]
+
+    sdk = [
+            buildTools: '28.0.3',
+            compileSdk: 28,
+            targetSdk : 28,
+            minSdk    : 19
+    ]
+
+    gradlePlugins = [
+            android         : "com.android.tools.build:gradle:$versions.android_gradle_plugin",
+            retrolambda     : "me.tatarka:gradle-retrolambda:$versions.retrolambda_gradle_plugin",
+            google_services : "com.google.gms:google-services:$versions.google_services_plugin",
+            maven           : "com.github.dcendents:android-maven-gradle-plugin:$versions.maven_gradle_plugin",
+            bintray         : "com.jfrog.bintray.gradle:gradle-bintray-plugin:$versions.bintray_gradle_plugin",
+            one_signal      : "gradle.plugin.com.onesignal:onesignal-gradle-plugin:$versions.one_signal_gradle_plugin",
+            kotlin          : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin_version",
+            kotlin_extension: "org.jetbrains.kotlin:kotlin-android-extensions:$versions.kotlin_version",
+            fabric          : "io.fabric.tools:gradle:$versions.fabric"
+    ]
+}

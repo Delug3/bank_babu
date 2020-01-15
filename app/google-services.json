@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "346196454398",
+    "firebase_url": "https://bank-babu.firebaseio.com",
+    "project_id": "bank-babu",
+    "storage_bucket": "bank-babu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346196454398:android:34a4aa5bd426517b",
+        "android_client_info": {
+          "package_name": "com.bankbabu.balance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "346196454398-llbk8cgik786tguub0m7dgttmi6oikrm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB59m59eSCpsJD8F4oKMmj3F6LrIPeZSco"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

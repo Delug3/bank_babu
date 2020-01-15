@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_bank_balance_bg">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            ads:layout_constraintBottom_toTopOf="@+id/recycler_view_sms_banking"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica_bold"
+            android:gravity="center"
+            android:text="@string/no_sms_for_this_bank"
+            android:textColor="@color/fiord"
+            android:textSize="19sp"
+            android:visibility="gone"
+            ads:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            ads:layout_constraintEnd_toStartOf="parent"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_sms_banking"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:nestedScrollingEnabled="false"
+            ads:layout_constraintBottom_toTopOf="@+id/ad_view"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:ignore="UnusedAttribute" />
+
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/ad_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            ads:adSize="MEDIUM_RECTANGLE"
+            ads:adUnitId="@string/add_unit_id"
+            ads:layout_constraintBottom_toTopOf="@+id/small_ad_view"
+            ads:layout_constraintStart_toStartOf="@+id/small_ad_view"
+            ads:layout_constraintTop_toBottomOf="@+id/recycler_view_sms_banking" />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/small_ad_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/add_unit_id"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintTop_toBottomOf="@+id/ad_view" />
+    </android.support.constraint.ConstraintLayout>

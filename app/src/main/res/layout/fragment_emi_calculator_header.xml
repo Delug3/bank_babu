@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/calculator_image"
+            android:layout_width="30dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_calculator_emi" />
+
+        <TextView
+            android:id="@+id/calculator_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/helvetica_bold"
+            android:text="@string/emi_header"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="29dp"
+        android:alpha="0.3"
+        android:background="@color/fiord" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/monthly_emi_button"
+            style="@style/ClickableWrapper"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="6dp"
+            android:checked="true"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_button_sip_background"
+            android:fontFamily="@font/helvetica_roman"
+            android:textColor="@drawable/sip_text_color_selector"
+            android:textOff="@string/emi_header"
+            android:textOn="@string/emi_header"
+            android:textSize="15sp" />
+
+        <ToggleButton
+            android:id="@+id/interest_button"
+            style="@style/ClickableWrapper"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_button_sip_background"
+            android:fontFamily="@font/helvetica_roman"
+            android:textAllCaps="false"
+            android:textColor="@drawable/sip_text_color_selector"
+            android:textOff="@string/interest_header"
+            android:textOn="@string/interest_header"
+            android:textSize="12sp" />
+
+        <ToggleButton
+            android:id="@+id/period_button"
+            style="@style/ClickableWrapper"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_button_sip_background"
+            android:fontFamily="@font/helvetica_roman"
+            android:textAllCaps="false"
+            android:textColor="@drawable/sip_text_color_selector"
+            android:textOff="@string/period_header"
+            android:textOn="@string/period_header"
+            android:textSize="12sp" />
+
+        <ToggleButton
+            android:id="@+id/loan_amount_button"
+            style="@style/ClickableWrapper"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_button_sip_background"
+            android:fontFamily="@font/helvetica_roman"
+            android:textAllCaps="false"
+            android:textColor="@drawable/sip_text_color_selector"
+            android:textOff="@string/loan_amount_newline"
+            android:textOn="@string/loan_amount_newline"
+            android:textSize="12sp" />
+    </RadioGroup>
+</LinearLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tool_names">
+        <item>@string/bank_balance_check</item>
+        <item>@string/payment_method</item>
+        <item>@string/payment_reminder</item>
+    </string-array>
+
+    <string-array name="tool_description">
+        <item>@string/check_your_balance_of_any_bank</item>
+        <item>@string/payment_methods_description</item>
+        <item>@string/payment_reminder_description</item>
+    </string-array>
+
+    <string-array name="category_names">
+        <item>@string/other</item>
+        <item>@string/home</item>
+        <item>@string/home_rent</item>
+        <item>@string/tax</item>
+        <item>@string/home_tax</item>
+        <item>@string/bus</item>
+        <item>@string/subway</item>
+        <item>@string/taxi</item>
+        <item>@string/electricity</item>
+        <item>@string/phone</item>
+        <item>@string/cellular</item>
+        <item>@string/water</item>
+        <item>@string/gas</item>
+        <item>@string/grocery</item>
+        <item>@string/restaurant</item>
+        <item>@string/service</item>
+        <item>@string/parking</item>
+        <item>@string/personal</item>
+        <item>@string/drug</item>
+        <item>@string/medical_fees</item>
+        <item>@string/book</item>
+        <item>@string/news_paper</item>
+        <item>@string/credit_card</item>
+    </string-array>
+
+    <string-array name="send_money">
+        <item>@string/to_mobile_number</item>
+        <item>@string/to_payment_address</item>
+        <item>@string/to_saved_beneficiary</item>
+        <item>@string/to_ifsc</item>
+        <item>@string/to_mmid</item>
+    </string-array>
+
+    <string-array name="send_money_code">
+        <item>@string/code_1_1</item>
+        <item>@string/code_1_2</item>
+        <item>@string/code_1_3</item>
+        <item>@string/code_1_4</item>
+        <item>@string/code_1_5</item>
+    </string-array>
+
+    <integer-array name="send_money_icon">
+        <item>@drawable/ic_to_phone_number</item>
+        <item>@drawable/ic_payment_address</item>
+        <item>@drawable/ic_saved_beneficiary</item>
+        <item>@drawable/ic_to_ifcs</item>
+        <item>@drawable/ic_to_mmid</item>
+    </integer-array>
+
+    <string-array name="send_money_1">
+        <item>@string/change_bak_account</item>
+        <item>@string/change_language</item>
+        <item>@string/my_bank_list_details</item>
+        <item>@string/my_payment_address</item>
+    </string-array>
+
+    <string-array name="send_money_code_1">
+        <item>@string/code_4_1</item>
+        <item>@string/code_4_2</item>
+        <item>@string/code_4_3</item>
+        <item>@string/code_4_4</item>
+        <item>@string/code_4_5</item>
+    </string-array>
+
+    <integer-array name="send_money_icon_2">
+        <item>@drawable/ic_check_bank_account</item>
+        <item>@drawable/ic_change_language</item>
+        <item>@drawable/ic_bank_link_details</item>
+        <item>@drawable/ic_payment_address</item>
+    </integer-array>
+    <string-array name="send_money_2">
+        <item>@string/reset_forgot_pin</item>
+        <item>@string/change_pin</item>
+    </string-array>
+
+    <string-array name="send_money_code_2">
+        <item>@string/code_7_1</item>
+        <item>@string/code_7_2</item>
+    </string-array>
+
+    <integer-array name="send_money_icon_3">
+        <item>@drawable/ic_forgot_upi</item>
+        <item>@drawable/ic_reset_upi_pin</item>
+    </integer-array>
+
+    <string-array name="repeats">
+        <item>@string/day</item>
+        <item>@string/week</item>
+        <item>@string/month</item>
+        <item>@string/year</item>
+    </string-array>
+
+    <string-array name="notifications">
+        <item>@string/dont_send_notification</item>
+        <item>@string/day_before</item>
+        <item>@string/day_before_2</item>
+        <item>@string/day_before_3</item>
+        <item>@string/day_before_5</item>
+        <item>@string/day_before_6</item>
+        <item>@string/day_before_7</item>
+        <item>@string/day_before_8</item>
+        <item>@string/day_before_9</item>
+        <item>@string/day_before_10</item>
+        <item>@string/day_before_11</item>
+        <item>@string/day_before_12</item>
+        <item>@string/day_before_13</item>
+        <item>@string/day_before_14</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item>English</item>
+        <item>Hindi</item>
+    </string-array>
+    <string-array name="language_codes">
+        <item>en</item>
+        <item>hi</item>
+    </string-array>
+</resources>

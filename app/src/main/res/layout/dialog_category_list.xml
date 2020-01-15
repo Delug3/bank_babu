@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+
+  <android.support.v7.widget.RecyclerView
+    android:id="@+id/recycler_view_categories"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:scrollbars="none"/>
+
+  <EditText
+    android:id="@+id/text_view_search"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layout_gravity="center"
+    android:padding="5dp"
+    android:background="#ffffff"
+    android:hint="@string/search_category"
+    android:inputType="textAutoComplete"
+    android:textSize="17sp"
+    tools:ignore="Autofill"/>
+
+  <TextView
+    android:id="@+id/text_view_new_category"
+    style="@style/ClickableWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:text="@string/new_category"
+    android:textAllCaps="true"
+    android:textColor="#ffffff"
+    android:textSize="15sp"/>
+</LinearLayout>

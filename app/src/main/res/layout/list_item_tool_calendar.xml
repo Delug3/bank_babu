@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginTop="16dp"
+              android:layout_marginBottom="30dp"
+              android:background="?selectableItemBackgroundBorderless"
+              android:gravity="center"
+              android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:id="@+id/item_layout"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:background="@drawable/calculator_item_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="6dp"
+            android:contentDescription="@string/content_description_tools_icon"
+            app:srcCompat="@drawable/ic_calculator_gst_icon"/>
+
+        <TextView
+            android:id="@+id/text_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/helvetica_bold"
+            android:gravity="center"
+            android:text="@string/more"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/coming_soon"
+        android:visibility="gone"
+        android:layout_width="98dp"
+        android:text="@string/coming_soon"
+        android:textSize="9sp"
+        android:fontFamily="@font/helvetica_bold"
+        android:background="@color/calculator_disabled_text_fill"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="20dp"/>
+</FrameLayout>

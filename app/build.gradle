@@ -1,0 +1,159 @@
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'io.fabric'
+
+android {
+    final sdk = rootProject.ext.sdk
+
+    compileSdkVersion sdk.compileSdk
+    buildToolsVersion sdk.buildTools
+
+    defaultConfig {
+        minSdkVersion sdk.minSdk
+        targetSdkVersion sdk.targetSdk
+        applicationId "com.bankbabu.balance"
+        versionCode 12
+        versionName "11.0.38"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [onesignal_app_id               : "d4e9377f-6d61-4bd8-91e8-85e9ad8acad0",
+                                // Project number pulled from dashboard, local value is ignored.
+                                onesignal_google_project_number: "REMOTE"]
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+    }
+    signingConfigs {
+        release {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def project = "bank-babu"
+            def SEP = "-"
+            def buildType = variant.variantData.variantConfiguration.buildType.name
+            def version = variant.versionName
+
+            def newApkName = project + SEP + buildType + SEP + 'v' + version + ".apk"
+
+            outputFileName = new File(newApkName)
+        }
+        variant.assembleProvider.configure { assemble ->
+            assemble.doLast {
+                //copy the apk in another directory, add here your
+                //logic to customize the destination folder
+//                copy {
+//                    from variant.outputs*.outputFile
+//                    //for Windows
+//                    into "/Users/andriydeputat/Documents/Android Projects/NewAgeCEO/bank_babu/apk_files/${variant.dirName}"
+//                }
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dexOptions {
+        jumboMode true
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    // Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin_version"
+
+    // Support library
+    implementation "com.android.support:appcompat-v7:$versions.supportLibraryVersion"
+    implementation "com.android.support:design:$versions.supportLibraryVersion"
+    // Bug fix Error inflating class android.support.design.widget.CollapsingToolbarLayout
+    implementation("com.android.support:support-v4:$versions.supportLibraryVersion") {
+        force = true
+    }
+    implementation "com.android.support:support-media-compat:$versions.supportLibraryVersion"
+    implementation "com.android.support:support-vector-drawable:$versions.supportLibraryVersion"
+    implementation "com.android.support:animated-vector-drawable:$versions.supportLibraryVersion"
+    implementation "com.android.support:cardview-v7:$versions.supportLibraryVersion"
+    implementation "com.android.support:customtabs:$versions.supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$versions.supportLibraryVersion"
+    implementation "com.android.support.constraint:constraint-layout:$versions.constraintLayout"
+    implementation "com.android.support:multidex:$versions.multidex"
+
+    // Views
+    implementation "org.fabiomsr:moneytextview:$versions.moneytextviewTextViewVersion"
+    // Page indicator view (bottom dots)
+    implementation 'com.romandanylyk:pageindicatorview:1.0.0'
+
+    // Room components
+    implementation "android.arch.persistence.room:runtime:$versions.roomVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    annotationProcessor "android.arch.persistence.room:compiler:$versions.roomVersion"
+    androidTestImplementation "android.arch.persistence.room:testing:$versions.roomVersion"
+
+    // Lifecycle components
+    implementation "android.arch.lifecycle:extensions:$versions.archLifecycleVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$versions.archLifecycleVersion"
+
+    // Eventbus
+    implementation "org.greenrobot:eventbus:$versions.eventbusVersion"
+
+    // Sqlite Asset Helper
+    implementation "com.readystatesoftware.sqliteasset:sqliteassethelper:$versions.sqliteassethelper"
+
+    // Firebase
+    implementation "com.google.firebase:firebase-core:$versions.firebaseCore"
+    implementation "com.google.firebase:firebase-ads:$versions.firebaseAds"
+
+    // Crashlytics
+    implementation("com.crashlytics.sdk.android:crashlytics:$versions.crashlytics") {
+        transitive = true
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+
+    // OneSignal
+    implementation "com.onesignal:OneSignal:$versions.oneSignal"
+
+    // View animation lib
+    implementation 'com.daimajia.easing:library:2.0@aar'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+
+    //Butterknife lib
+    implementation "com.jakewharton:butterknife:$versions.butterknife"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$versions.butterknife"
+
+    // Picasso lib
+    implementation "com.squareup.picasso:picasso:$versions.picasso"
+    //parse
+
+    implementation 'com.github.parse-community.Parse-SDK-Android:parse:1.18.5'
+    implementation 'com.thoughtbot:expandablerecyclerview:1.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+}
+repositories {
+    mavenCentral()
+}
+
+apply plugin: "com.google.gms.google-services"

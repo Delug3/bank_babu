@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/main_tool_item_background"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:minHeight="65dp">
+
+    <ImageView
+        android:id="@+id/left_img"
+        android:layout_width="6dp"
+        android:layout_height="0dp"
+        android:src="@drawable/rounded_left_rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="24dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/helvetica_bold"
+        android:lines="1"
+        android:maxLines="1"
+        android:minLines="1"
+        android:textColor="@color/fiord"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_subtitle"
+        app:layout_constraintEnd_toStartOf="@+id/right_img"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/left_img"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Check bank balance"/>
+
+    <TextView
+        android:id="@+id/text_view_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/helvetica_light"
+        android:lines="1"
+        android:maxLines="1"
+        android:minLines="1"
+        android:textColor="@color/fiord_transparent"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/right_img"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/left_img"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_title"
+        tools:text="Check bank balance"/>
+
+    <ImageView
+        android:id="@+id/right_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow"/>
+
+</android.support.constraint.ConstraintLayout>

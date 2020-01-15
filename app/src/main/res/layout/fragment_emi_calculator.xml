@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/loan_amount_input_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image_view_loan_amount"
+                android:layout_width="26dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/sip_amount_icon"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_bold"
+                android:minWidth="110dp"
+                android:text="@string/text_loan_amount"
+                android:textColor="@color/fiord"
+                android:textSize="16sp" />
+
+            <com.bankbabu.balance.views.CurrencyEditText
+                android:id="@+id/edit_text_loan_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:inputType="number"
+                android:minWidth="100dp"
+                android:textSize="14sp"
+                app:decimal_digits="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/monthly_emi_input_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image_view_emi"
+                android:layout_width="26dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_emi"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_bold"
+                android:minWidth="110dp"
+                android:text="@string/text_monthly_emi"
+                android:textColor="@color/fiord"
+                android:textSize="16sp" />
+
+            <com.bankbabu.balance.views.CurrencyEditText
+                android:id="@+id/edit_text_monthly_emi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:inputType="number"
+                android:minWidth="100dp"
+                android:textSize="14sp"
+                app:decimal_digits="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/period_input_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image_view_period"
+                android:layout_width="22dp"
+                android:layout_height="23dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/investment_period_icon"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_bold"
+                android:minWidth="110dp"
+                android:text="@string/text_period"
+                android:textColor="@color/fiord"
+                android:textSize="16sp" />
+
+            <com.bankbabu.balance.views.EditTextWithSuffix
+                android:id="@+id/edit_text_period"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:inputType="number"
+                android:minWidth="100dp"
+                android:textSize="14sp"
+                app:suffix="@string/text_month"
+                tools:text="12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/interest_rate_input_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image_view_interest_rate"
+                android:layout_width="26dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/return_rate_icon"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_bold"
+                android:minWidth="110dp"
+                android:text="@string/text_interest_rate"
+                android:textColor="@color/fiord"
+                android:textSize="16sp" />
+
+            <com.bankbabu.balance.views.EditTextWithSuffix
+                android:id="@+id/edit_text_interest_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:inputType="number"
+                android:minWidth="100dp"
+                android:textSize="14sp"
+                app:suffix="%" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="135dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_marginEnd="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/gst_procent_border"
+            android:text="@string/text_reset"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            tools:ignore="UnusedAttribute" />
+
+        <Button
+            android:id="@+id/button_calculate"
+            style="@style/ClickableWrapper"
+            android:layout_width="135dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_button_sip_background"
+            android:text="@string/text_calculate"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/total_calculation_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/total_calculation_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/helvetica_bold"
+            android:text="@string/text_total_calculation"
+            android:textColor="@color/fiord" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/monthly_emi_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/helvetica_roman"
+                    android:text="@string/text_monthly_emi"
+                    android:textColor="@color/fiord" />
+
+                <org.fabiomsr.moneytextview.MoneyTextView
+                    android:id="@+id/text_view_monthly_emi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:baseTextColor="@color/fiord"
+                    app:baseTextSize="15sp"
+                    app:decimalSeparator="."
+                    app:symbol="₹"
+                    app:decimalTextColor="@color/fiord"
+                    app:symbolTextColor="@color/fiord"
+                    tools:text="$5000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/period_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/helvetica_roman"
+                    android:text="@string/text_period"
+                    android:textColor="@color/fiord" />
+
+                <TextView
+                    android:id="@+id/text_view_period"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fiord"
+                    android:textSize="15sp"
+                    android:text="@string/zero_months" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/interest_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/helvetica_roman"
+                    android:text="@string/text_interest"
+                    android:textColor="@color/fiord" />
+
+                <TextView
+                    android:id="@+id/text_view_interest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fiord"
+                    android:textSize="15sp"
+                    android:text="@string/zero_procents" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loan_amount_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/helvetica_roman"
+                    android:text="@string/text_interest"
+                    android:textColor="@color/fiord" />
+
+                <org.fabiomsr.moneytextview.MoneyTextView
+                    android:id="@+id/text_view_loan_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:baseTextColor="@color/fiord"
+                    app:baseTextSize="15sp"
+                    app:decimalSeparator="."
+                    app:symbol="₹"
+                    app:decimalTextColor="@color/fiord"
+                    app:symbolTextColor="@color/fiord"
+                    tools:text="$5000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/total_interest_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/helvetica_roman"
+                    android:text="@string/text_total_interest"
+                    android:textColor="@color/fiord" />
+
+                <org.fabiomsr.moneytextview.MoneyTextView
+                    android:id="@+id/text_view_total_interest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:baseTextColor="@color/fiord"
+                    app:baseTextSize="15sp"
+                    app:decimalSeparator="."
+                    app:decimalTextColor="@color/fiord"
+                    app:symbolTextColor="@color/fiord"
+                    app:symbol="₹"
+                    tools:text="$5000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/total_payment_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/total_payment_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/helvetica_roman"
+                    android:text="@string/text_total_payment"
+                    android:textColor="@color/fiord" />
+
+                <org.fabiomsr.moneytextview.MoneyTextView
+                    android:id="@+id/text_view_total_payment_placeholder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:baseTextColor="@color/fiord"
+                    app:baseTextSize="15sp"
+                    app:decimalSeparator="."
+                    app:decimalTextColor="@color/fiord"
+                    app:symbol="₹"
+                    app:symbolTextColor="@color/fiord"
+                    tools:text="$5000" />
+
+                <org.fabiomsr.moneytextview.MoneyTextView
+                    android:id="@+id/text_view_total_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:baseTextColor="@color/fiord"
+                    app:baseTextSize="15sp"
+                    ads:fontPath="font/helvetica_neue_bold.ttf"
+                    android:visibility="gone"
+                    app:decimalSeparator="."
+                    app:symbol="₹"
+                    app:decimalTextColor="@color/fiord"
+                    app:symbolTextColor="@color/fiord"
+                    tools:text="$5000" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:descendantFocusability="blocksDescendants"
+        android:focusableInTouchMode="false"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/ad_view"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:foregroundGravity="bottom"
+            android:gravity="bottom"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/add_unit_id" />
+    </LinearLayout>
+</LinearLayout>

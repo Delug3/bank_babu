@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="horizontal"
+  tools:background="@color/colorPrimary">
+
+  <ImageView
+      android:id="@+id/image_view_menu"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_vertical"
+      android:layout_marginStart="@dimen/default_margin_small"
+      android:background="?selectableItemBackgroundBorderless"
+      android:clickable="true"
+      android:focusable="true"
+      android:padding="@dimen/default_margin_small"
+      app:srcCompat="@drawable/ic_toolbar_arrow"/>
+
+  <TextView
+    android:id="@+id/toolbarTitle"
+    style="@style/ToolbarTitle"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:layout_marginStart="@dimen/default_margin"
+    android:layout_gravity="center_vertical"
+    android:lines="1"
+    tools:text="Parts of the body"/>
+
+  <android.support.v7.widget.AppCompatImageView
+      android:id="@+id/toolbarRate"
+      app:srcCompat="@drawable/ic_favourite"
+      android:layout_gravity="center"
+      android:padding="10dp"
+      android:background="?selectableItemBackgroundBorderless"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"/>
+
+</LinearLayout>

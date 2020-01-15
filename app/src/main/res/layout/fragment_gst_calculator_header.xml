@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="14dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/helvetica_bold"
+        android:text="@string/text_initial_amount"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"/>
+
+    <com.bankbabu.balance.views.CurrencyEditText
+        android:id="@+id/edit_text_initial_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="@font/helvetica_roman"
+        android:minWidth="185dp"
+        android:textAlignment="center"
+        android:textColor="@color/fiord"
+        android:textSize="24sp"
+        app:decimal_digits="0"/>
+
+    <LinearLayout
+        android:layout_width="185dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/gst_rate_border"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica_bold"
+            android:text="@string/text_gst_rate"
+            android:textAllCaps="true"
+            android:textColor="@color/fiord"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/text_view_gst_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica_roman"
+            android:text="@string/text_gst_rate"
+            android:textAllCaps="true"
+            android:textColor="@color/fiord"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:text="12%"/>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/button_gst_rate_six"
+            style="@style/ClickableWrapper"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_button_sip_background"
+            android:fontFamily="@font/helvetica_roman"
+            android:textColor="@drawable/sip_text_color_selector"
+            android:textOff="@string/gst_rate_six"
+            android:textOn="@string/gst_rate_six"
+            android:textSize="15sp"/>
+
+        <ToggleButton
+            android:id="@+id/button_gst_rate_twelve"
+            style="@style/ClickableWrapper"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_button_sip_background"
+            android:checked="true"
+            android:fontFamily="@font/helvetica_roman"
+            android:textColor="@drawable/sip_text_color_selector"
+            android:textOff="@string/gst_rate_twelve"
+            android:textOn="@string/gst_rate_twelve"
+            android:textSize="15sp"/>
+
+        <ToggleButton
+            android:id="@+id/button_gst_rate_eighteen"
+            style="@style/ClickableWrapper"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_button_sip_background"
+            android:fontFamily="@font/helvetica_roman"
+            android:textColor="@drawable/sip_text_color_selector"
+            android:textOff="@string/gst_rate_eighteen"
+            android:textOn="@string/gst_rate_eighteen"
+            android:textSize="15sp"/>
+
+        <ToggleButton
+            android:id="@+id/button_gst_rate_twenty_eight"
+            style="@style/ClickableWrapper"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_button_sip_background"
+            android:fontFamily="@font/helvetica_roman"
+            android:textColor="@drawable/sip_text_color_selector"
+            android:textOff="@string/gst_rate_twenty_eight"
+            android:textOn="@string/gst_rate_twenty_eight"
+            android:textSize="15sp"/>
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="12dp"
+        android:alpha="0.3"
+        android:background="@color/fiord"/>
+</LinearLayout>

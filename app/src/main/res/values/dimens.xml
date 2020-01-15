@@ -1,0 +1,15 @@
+<resources>
+  <!-- Default screen margins, per the Android Design guidelines. -->
+
+  <dimen name="button_more_radius">32dp</dimen>
+
+  <dimen name="heart_size">45dp</dimen>
+  <dimen name="default_margin_small">12dp</dimen>
+  <dimen name="default_margin">24dp</dimen>
+  <dimen name="corner_radius_rounded">25dp</dimen>
+  <dimen name="corner_radius_default">2dp</dimen>
+
+
+  <dimen name="carousel_card_width">240dp</dimen>
+  <dimen name="carousel_card_margin">20dp</dimen>
+</resources>

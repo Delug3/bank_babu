@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:layout_width="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/helvetica_light"
+                        android:textColor="@color/fiord"
+                        android:gravity="center"
+                        android:text="@string/currency"
+                        android:textAllCaps="true"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/inr"
+                        android:layout_marginStart="23dp"
+
+                        android:textAllCaps="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:textColor="@color/fiord"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="14dp"
+                        android:fontFamily="@font/helvetica_light"
+                        android:gravity="center"
+                        android:textColor="@color/fiord"
+                        android:text="@string/amount"
+                        android:textAllCaps="true"
+                        android:textSize="14sp"/>
+
+                    <EditText
+                        android:id="@+id/text_view_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/enter_here"
+                        android:inputType="numberDecimal"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/fiord"
+                        android:textSize="16sp"
+                        tools:ignore="Autofill"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/icv_more_horiz_gray"
+                        tools:ignore="ContentDescription"/>
+
+                    <EditText
+                        android:id="@+id/edit_text_category"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:padding="10dp"
+                        android:background="#ffffff"
+                        android:hint="@string/select_category"
+                        android:inputType="text"
+                        android:textSize="15sp"
+                        tools:ignore="Autofill"/>
+
+                    <ImageView
+                        android:id="@+id/image_view_select_category"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_category_other"
+                        tools:ignore="ContentDescription"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:tint="@color/fiord"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/icv_payees_gray"
+                        tools:ignore="ContentDescription"/>
+
+                    <EditText
+                        android:id="@+id/edit_text_payee_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:hint="@string/payee_item"
+                        android:inputType="textAutoComplete"
+                        android:textColorHint="@color/fiord"
+                        android:textSize="14sp"
+                        tools:ignore="Autofill"/>
+                </LinearLayout>
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginEnd="13dp"
+                    android:background="@color/cornflower_blue" />
+
+                <LinearLayout
+                    android:layout_marginTop="13dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/icv_note_gray"
+                        android:tint="@color/fiord"
+                        tools:ignore="ContentDescription"/>
+
+                    <EditText
+                        android:id="@+id/edit_text_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="top"
+                        android:textColorHint="@color/fiord"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:fontFamily="@font/helvetica_roman"
+                        android:hint="@string/notes"
+                        android:inputType="textMultiLine"
+                        android:textSize="14sp"
+                        tools:text="You can list your own promissory notes through the Corporate/Personal Internet Accounts or the Products step or Payments step, and make the payments of your notes in “Pending Collection” status through the same step. In cases when you make payments. the same step. In cases when you make payments."/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="@string/max_250_characters"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:gravity="end"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/fiord"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="13dp"
+                android:layout_marginStart="36dp"
+                android:background="@color/cornflower_blue" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/account_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            app:srcCompat="@drawable/ic_person"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="22dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/account_name"
+            android:textSize="14sp"
+            android:textColor="@color/fiord"
+            android:textAllCaps="true"
+            android:fontFamily="@font/helvetica_roman"
+            android:layout_width="wrap_content"
+            tools:text="DONALD TRUMP JR."
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            app:srcCompat="@drawable/ic_bank"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="18dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/bank_name"
+            android:textSize="14sp"
+            android:textColor="@color/fiord"
+            android:textAllCaps="true"
+            android:fontFamily="@font/helvetica_roman"
+            android:layout_width="wrap_content"
+            tools:text="STATE BANK OF INDIA"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="30dp"
+            app:srcCompat="@drawable/ic_bank_number" />
+
+        <TextView
+            android:id="@+id/bank_number"
+            android:textSize="14sp"
+            android:textColor="@color/fiord"
+            android:textAllCaps="true"
+            android:fontFamily="@font/helvetica_roman"
+            android:layout_width="wrap_content"
+            tools:text="62246357357246246357"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            app:srcCompat="@drawable/ic_ifsc"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="14dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/ifsc_number"
+            android:textSize="14sp"
+            android:textColor="@color/fiord"
+            android:textAllCaps="true"
+            android:fontFamily="@font/helvetica_roman"
+            android:layout_width="wrap_content"
+            tools:text="SBIN00034567K"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            app:srcCompat="@drawable/ic_account"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="18dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/account_type"
+            android:textSize="14sp"
+            android:textColor="@color/fiord"
+            android:textAllCaps="true"
+            android:fontFamily="@font/helvetica_roman"
+            android:layout_width="wrap_content"
+            tools:text="LOAN ACCOUNT"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/add_account"
+            android:layout_width="135dp"
+            android:layout_height="41dp"
+            android:layout_margin="10dp"
+            android:layout_marginEnd="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/gst_procent_border"
+            android:text="@string/add_account"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            tools:ignore="UnusedAttribute" />
+
+        <Button
+            android:id="@+id/button_share"
+            style="@style/ClickableWrapper"
+            android:layout_width="135dp"
+            android:layout_height="41dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_button_sip_background"
+            android:text="@string/request_account"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/ad_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:foregroundGravity="bottom"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/add_unit_id">
+        </com.google.android.gms.ads.AdView>
+    </LinearLayout>
+</LinearLayout>
+
+</ScrollView>

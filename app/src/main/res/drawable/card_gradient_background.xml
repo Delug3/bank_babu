@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <selector>
+            <item>
+                <shape>
+                    <corners android:radius="15dp"/>
+                    <gradient
+                        android:angle="45"
+                        android:endColor="#054ada"
+                        android:startColor="#4188db"
+                        android:type="linear"/>
+                </shape>
+            </item>
+        </selector>
+    </item>
+
+    <item
+        android:drawable="@drawable/ic_triangle_3"
+        android:gravity="bottom|end"
+        android:right="120dp">
+        <shape>
+            <size
+                android:width="45dp"
+                android:height="20dp"/>
+        </shape>
+    </item>
+
+    <item
+        android:drawable="@drawable/ic_triangle_2"
+        android:gravity="bottom|end"
+        android:right="55dp">
+        <shape>
+            <size
+                android:width="70dp"
+                android:height="35dp"/>
+        </shape>
+    </item>
+
+    <item
+        android:drawable="@drawable/ic_triangle"
+        android:gravity="bottom|end">
+        <shape>
+            <size
+                android:width="85dp"
+                android:height="70dp"/>
+        </shape>
+    </item>
+
+</layer-list>

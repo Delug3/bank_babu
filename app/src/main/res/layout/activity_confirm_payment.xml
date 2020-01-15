@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whisper">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_bank_balance_bg"
+        android:orientation="vertical"
+        tools:context=".activities.ConfirmPaymentActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="17sp"
+            android:fontFamily="@font/helvetica_bold"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="14dp"
+            android:textColor="@color/fiord"
+            android:text="@string/confirmation_of_contract"
+            android:textAllCaps="true" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_height="1dp"
+            android:alpha="0.3"
+            android:layout_marginBottom="20dp"
+            android:background="@color/fiord" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/payee_name"
+                android:textSize="15sp"
+                android:layout_marginStart="26dp"
+                android:fontFamily="@font/helvetica_bold"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/fiord"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:id="@+id/user_payee_name"
+                android:text="@string/no_value"
+                android:textSize="15sp"
+                android:fontFamily="@font/helvetica_roman"
+                android:layout_width="match_parent"
+                android:textColor="@color/fiord"
+                tools:text="M.S. MUTHUSWAY ROBERT"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/bank_text"
+                android:textSize="15sp"
+                android:layout_marginStart="26dp"
+                android:fontFamily="@font/helvetica_bold"
+                android:layout_marginEnd="10dp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/fiord"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:id="@+id/user_bank_name"
+                android:text="@string/no_value"
+                android:textSize="15sp"
+                android:fontFamily="@font/helvetica_roman"
+                android:layout_width="match_parent"
+                android:textColor="@color/fiord"
+                tools:text="M.S. MUTHUSWAY ROBERT"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/account_number"
+                android:textSize="15sp"
+                android:layout_marginStart="26dp"
+                android:fontFamily="@font/helvetica_bold"
+                android:layout_marginEnd="10dp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/fiord"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:id="@+id/user_account_number"
+                android:text="@string/no_value"
+                android:textSize="15sp"
+                android:fontFamily="@font/helvetica_roman"
+                android:layout_width="match_parent"
+                android:textColor="@color/fiord"
+                tools:text="M.S. MUTHUSWAY ROBERT"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/account_type"
+                android:textSize="15sp"
+                android:layout_marginStart="26dp"
+                android:fontFamily="@font/helvetica_bold"
+                android:layout_marginEnd="10dp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/fiord"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:id="@+id/user_account_type"
+                android:text="@string/no_value"
+                android:textSize="15sp"
+                android:fontFamily="@font/helvetica_roman"
+                android:layout_width="match_parent"
+                android:textColor="@color/fiord"
+                tools:text="M.S. MUTHUSWAY ROBERT"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Mode:"
+                android:textSize="15sp"
+                android:layout_marginStart="26dp"
+                android:fontFamily="@font/helvetica_bold"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/fiord"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:id="@+id/user_mode"
+                android:text="@string/no_value"
+                android:textSize="15sp"
+                android:fontFamily="@font/helvetica_roman"
+                android:layout_width="match_parent"
+                android:textColor="@color/fiord"
+                tools:text="M.S. MUTHUSWAY ROBERT"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/reset_button"
+                android:layout_width="135dp"
+                android:layout_height="41dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/payment_confirm_btn"
+                android:text="@string/edit"
+                android:textAllCaps="false"
+                android:textColor="@color/fiord"
+                android:textStyle="bold"
+                tools:ignore="UnusedAttribute" />
+
+            <Button
+                android:id="@+id/confirm_button"
+                style="@style/ClickableWrapper"
+                android:layout_width="135dp"
+                android:layout_height="41dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_button_sip_background"
+                android:text="@string/confirm"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="bottom"
+            android:layout_height="100dp">
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ad_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="LARGE_BANNER"
+            ads:adUnitId="@string/add_unit_id" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

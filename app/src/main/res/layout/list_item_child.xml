@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_container"
+    style="@style/ClickableWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cruise"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="6dp"
+        android:layout_height="match_parent"
+        android:background="@color/eucalyptus" />
+
+    <ImageView
+        android:id="@+id/image_view_icon"
+        style="@style/ClickableWrapper"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/ic_mark_complete"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_view_payee"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/helvetica_bold"
+                android:paddingTop="5dp"
+                android:text="@string/payee"
+                android:textColor="@color/fiord"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/text_view_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="@color/fiord"
+                    android:fontFamily="@font/helvetica_roman"
+                    android:paddingTop="4dp"
+                    android:text="@string/notes_detail"
+                    android:textSize="13sp" />
+
+
+                <org.fabiomsr.moneytextview.MoneyTextView
+                    android:id="@+id/text_view_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false"
+                    ads:symbol="₹"
+                    ads:symbolTextColor="@color/fiord"
+                    app:baseTextColor="@color/fiord"
+                    android:fontFamily="@font/helvetica_roman"
+                    android:text="@string/default_amount"
+                    app:symbolTextSize="13sp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="4dp"
+                    app:baseTextSize="13sp"
+                    app:decimalDigitsTextSize="13sp"
+                    app:decimalSeparator="."
+                    app:decimalTextColor="@color/fiord"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="11dp"
+        android:layout_marginStart="11dp"
+        android:gravity="center"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/image_view_repeat"
+            style="@style/ClickableWrapper"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/icv_replay_gray"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/image_view_notification"
+            style="@style/ClickableWrapper"
+            android:layout_width="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/icv_notifications_gray"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wrapper_share"
+        style="@style/ClickableWrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/eucalyptus">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:padding="2.5dp"
+            android:tint="@android:color/white"
+            app:srcCompat="@drawable/ic_share"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+
+</LinearLayout>
